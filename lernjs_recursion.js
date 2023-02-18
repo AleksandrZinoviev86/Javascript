@@ -11,8 +11,11 @@ const _obj = {
     },
     sumTo_2: function(x){
         return ((1 + x)/2)*x
+    },
+    fractals: function(x) {
+        return x == 1 ? x : x * this.fractals(x -1);
     }
 }
-console.log(_obj.sumTo_0(4));
-console.log(_obj.sumTo_1(4));
-console.log(_obj.sumTo_2(4));
+console.log(_obj.fractals(2));
+console.log(_obj.fractals(4));
+console.log(_obj.fractals(6));
