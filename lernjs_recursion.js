@@ -29,8 +29,16 @@ const _obj = {
         }
     },
     fib_2: function(x){
-        return x <= 1 ? x : this.fib_2(x - 1) + this.fib_2(x - 2)
+        x <= 1 ? x : this.fib_2(x - 1) + this.fib_2(x - 2)
+    },
+    printList: function(list){
+        
+        if(list.next == null){
+            console.log(list.value)
+            return  list.value
+        } else {
+            console.log(list.value)
+            return this.printList(list.next)
+        }
     }
 }
-console.log(_obj.fib_2(3));
-console.log(_obj.fib_2(40));
