@@ -27,7 +27,10 @@ const _obj = {
             }
             return res_1
         }
+    },
+    fib_2: function(x){
+        return x <= 1 ? x : this.fib_2(x - 1) + this.fib_2(x - 2)
     }
 }
-console.log(_obj.fib(3));
-console.log(_obj.fib(77));
+console.log(_obj.fib_2(3));
+console.log(_obj.fib_2(40));
