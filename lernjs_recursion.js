@@ -14,8 +14,20 @@ const _obj = {
     },
     fractals: function(x) {
         return x == 1 ? x : x * this.fractals(x -1);
+    },
+    fib: function(x){
+        if(x == 0 || x == 1){
+            return x
+        } else {
+            let res_1 = 1
+            let res_2 = 1
+            for(let i = 3; i <= x; i++){
+                res_1 = res_1 + res_2
+                res_2 = res_1 - res_2 
+            }
+            return res_1
+        }
     }
 }
-console.log(_obj.fractals(2));
-console.log(_obj.fractals(4));
-console.log(_obj.fractals(6));
+console.log(_obj.fib(3));
+console.log(_obj.fib(77));
